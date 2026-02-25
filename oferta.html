@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="FitFood Box — pełna oferta diet pudełkowych: Sport, Wege, Low Carb. Sprawdź skład, kaloryczność i wybierz idealny plan." />
+  <title>Oferta — FitFood Box</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../img/1.webp" />
+
+  <style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    background: #fff;
+  }
+  .header--hidden {
+    transform: translateY(-100%);
+  }
+  body {
+    padding-top: 70px; /* wysokość headera */
+    scroll-behavior: smooth; /* płynny scroll dla anchorów */
+  }
+    .menu-card {
+      background: linear-gradient(145deg, #ffffff, #f0fff0);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+
+    .menu-card__media img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-card:hover .menu-card__media img {
+      transform: scale(1.05);
+    }
+
+    .menu-card__body {
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .menu-card__body h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #0f172a;
+    }
+
+    .menu-card__body p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .menu-card__meta {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-card__meta .btn {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.8rem;
+    }
+
+    #zamow .cta-box {
+      padding: 2rem 1.5rem;
+      border-radius: 18px;
+      background: linear-gradient(90deg, #f0fff0, #ffffff);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #zamow .cta-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+    }
+
+    #zamow h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #zamow p {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+<a class="skiplink" href="#maincontent">Przejdź do treści</a>
+
+<header class="header" role="banner">
+  <div class="header__inner container">
+    <a href="../index.html" class="brand" aria-label="Strona główna FitFood Box">
+      <div class="brand__logo" aria-hidden="true">FB</div>
+      <div class="brand__title">
+        <span class="name">FitFood Box</span>
+        <span class="tag">Zdrowe posiłki z dowozem</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none">
+          <rect width="22" height="2" rx="1" y="0" fill="#0f172a"></rect>
+          <rect width="22" height="2" rx="1" y="6" fill="#0f172a" opacity="0.8"></rect>
+          <rect width="22" height="2" rx="1" y="12" fill="#0f172a" opacity="0.6"></rect>
+        </svg>
+      </button>
+
+      <ul class="nav__list" id="primaryNav" aria-hidden="true">
+        <li class="nav__item"><a href="../index.html">Strona główna</a></li>
+        <li class="nav__item" ><a class="active" href="oferta.html">Oferta</a></li>
+        <li class="nav__item"><a href="cennik.html">Cennik</a></li>
+        <li class="nav__item"><a href="onas_kontakt.html">O nas / Kontakt</a></li>
+        <li class="nav__item"><a class="nav__cta" href="#zamow">Zamów teraz</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="maincontent">
+  <section class="hero container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <span class="eyebrow">Pełna oferta diet pudełkowych</span>
+        <h1>Wybierz plan żywieniowy dopasowany do Twoich celów.</h1>
+        <p class="lead">Diety skoncentrowane na wynikach — treningowych, zdrowotnych lub sylwetkowych. Wybierz wariant, zobacz przykładowe menu i zamów w kilka kliknięć.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#sport">Dieta Sport</a>
+          <a class="btn btn--ghost" href="#wege">Dieta Wege</a>
+          <a class="btn btn--ghost" href="#lowcarb">Low Carb</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <picture>
+          <source type="image/webp" srcset="../img/1.webp 1200w, ../img/1.webp 800w">
+          <img src="../img/1.webp" alt="Zestaw pudełek FitFood Box — różne typy diet w jednym zestawie" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="sport">
+    <h2>Dieta Sport</h2>
+    <p class="muted">Zwiększona ilość białka, posiłki wspierające regenerację i przyrost masy mięśniowej.</p>
+
+    <div class="menu-grid" style="margin-top:1rem">
+      <article class="menu-card">
+        <div class="menu-card__media">
+          <picture>
+            <source type="image/webp" srcset="../img/2.webp 800w, ../img/2.webp 400w">
+            <img src="../img/2.webp" alt="Dieta Sport — przykładowy posiłek: kurczak, warzywa, ryż">
+          </picture>
+        </div>
+        <div class="menu-card__body">
+          <h3>Przykładowe menu</h3>
+          <p>Kurczak z ryżem, łosoś z warzywami, pasta pełnoziarnista z indykiem.</p>
+          <div class="menu-card__meta">
+            <span>~ 1800–2500 kcal</span>
+            <a class="btn btn--primary" href="#zamow">Zamów</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="wege">
+    <h2>Dieta Wege</h2>
+    <p class="muted">Pełnowartościowa dieta roślinna — idealna dla osób ograniczających mięso i dbających o zdrowie.</p>
+
+    <div class="menu-grid" style="margin-top:1rem">
+      <article class="menu-card">
+        <div class="menu-card__media">
+          <picture>
+            <source type="image/webp" srcset="../img/3.jpg 800w, ../img/3.jpg 400w">
+            <img src="../img/3.jpg" alt="Dieta Wege — przykładowy posiłek: warzywa, kasza, hummus">
+          </picture>
+        </div>
+        <div class="menu-card__body">
+          <h3>Przykładowe menu</h3>
+          <p>Hummus, tofu stir-fry, kasza bulgur z warzywami sezonowymi.</p>
+          <div class="menu-card__meta">
+            <span>~ 1500–2000 kcal</span>
+            <a class="btn btn--primary" href="#zamow">Zamów</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="lowcarb">
+    <h2>Low Carb</h2>
+    <p class="muted">Minimalna ilość węglowodanów, dużo warzyw i zdrowych tłuszczy — idealna dla redukcji masy ciała.</p>
+
+    <div class="menu-grid" style="margin-top:1rem">
+      <article class="menu-card">
+        <div class="menu-card__media">
+          <picture>
+            <source type="image/webp" srcset="../img/4.jpg 800w, ../img/4.jpg 400w">
+            <img src="../img/4.jpg" alt="Low Carb — sałatka z jajkiem i łososiem">
+          </picture>
+        </div>
+        <div class="menu-card__body">
+          <h3>Przykładowe menu</h3>
+          <p>Sałatka z łososiem, omlet warzywny, grillowany indyk z fasolką.</p>
+          <div class="menu-card__meta">
+            <span>~ 1200–1700 kcal</span>
+            <a class="btn btn--primary" href="#zamow">Zamów</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="zamow">
+    <div class="cta-box">
+      <h2>Zamów swoją dietę</h2>
+      <p>Wybierz rodzaj diety, liczbę dni i lokalizację dostawy. Pierwsze zamówienie -10%.</p>
+      <a class="btn btn--primary" href="../pages/onas_kontakt.html#formularz-zamowienia">Przejdź do zamówienia</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="../index.html" class="brand" style="color:inherit">
+        <div class="brand__logo">FB</div>
+        <div class="brand__title">
+          <span class="name">FitFood Box</span>
+          <span class="tag">Zdrowe posiłki z dowozem</span>
+        </div>
+      </a>
+    </div>
+
+    <div>
+      <h4>Menu</h4>
+      <ul style="list-style:none;padding:0">
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="cennik.html">Cennik</a></li>
+        <li><a href="onas_kontakt.html">O nas / Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Kontakt</h4>
+      <p class="muted">email: kontakt@fitfoodbox.pl</p>
+      <p class="muted">tel: +48 123 456 789</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:1.25rem;color:rgba(255,255,255,0.8);font-size:.9rem">
+      <small>© <span id="year"></span> FitFood Box — wszystkie prawa zastrzeżone</small>
+    </div>
+</footer>
+<script>
+  (function(){
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('primaryNav');
+    if (toggle && nav) {
+      nav.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+
+      toggle.addEventListener('click', () => {
+        const open = nav.getAttribute('aria-hidden') === 'false';
+        nav.setAttribute('aria-hidden', String(!open));
+        toggle.setAttribute('aria-expanded', String(!open));
+        document.body.style.overflow = !open ? 'hidden' : '';
+        toggle.title = !open ? 'Zamknij menu' : 'Otwórz menu';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && nav.getAttribute('aria-hidden') === 'false') {
+          nav.setAttribute('aria-hidden','true');
+          toggle.setAttribute('aria-expanded','false');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    let lastScroll = 0;
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add('header--hidden');
+      } else {
+        header.classList.remove('header--hidden');
+      }
+      lastScroll = currentScroll;
+    });
+
+    const yearEl = document.getElementById('year');
+    if(yearEl) yearEl.textContent = new Date().getFullYear();
+  })();
+</script>
+
+</body>
+</html>
